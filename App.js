@@ -1,5 +1,3 @@
-
-hjgjhghjgjhg
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState } from 'react';
 import { Alert,Text,TouchableOpacity, View } from 'react-native';
