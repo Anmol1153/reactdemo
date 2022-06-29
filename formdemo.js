@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState } from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import CustomInputs from './src/customcomponents/CustomInputs';
-
+import CustomTouchableButtons from './src/customcomponents/CustomTouchableButtons';
 const formdemo= ({navigation}) =>{
  
   const [email1, setemail] = useState("")
@@ -57,16 +57,11 @@ onChangeText={(text)=>{
 }}
 />
      
-<TouchableOpacity style={{ backgroundColor: 'black', width: '50%', alignSelf: 'center', margin: 20 }}
-onPress={getvalue}
->
-  
-  <Text style={{fontSize: 25,color: 'white',fontWeight:'bold',marginBottom:10,alignSelf:'center',justifyContent: 'center'}} >
-                   Login 
-                  {/* {route?.params?.Name1}   */}
-                 
-                </Text>
-</TouchableOpacity>
+<CustomTouchableButtons
+ buttonTitle='Login'
+ onPress={getvalue}
+
+/>
 </View>     
 
 

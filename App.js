@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useState } from 'react';
 import { Alert,Text,TouchableOpacity, View } from 'react-native';
 import CustomInputs from './src/customcomponents/CustomInputs';
-
+import CustomTouchableButtons from './src/customcomponents/CustomTouchableButtons';
 const App = ({ navigation }) => {
 
   const [name, setname] = useState("")
@@ -89,7 +89,7 @@ onChangeText={(text)=>{
   setemail(text)
 }}
 />
-     
+    
 <CustomInputs
 placeholder='Enter Password'
 value={password}
@@ -100,47 +100,11 @@ onChangeText={(text)=>{
   setpass(text)
 }}
 />
+<CustomTouchableButtons
+ buttonTitle='SignUp'
+ onPress={validation}
 
-      <TouchableOpacity style={{ backgroundColor: 'black', width: '50%', alignSelf: 'center', margin: 20 }}
-
-onPress={validation}
-      
-
-      >
-
-        <Text style={{ fontWeight: 'bold', alignSelf: 'center', fontSize: 25, color: 'white'}}
-        >
-          SignUp</Text>
-      </TouchableOpacity>
-      {/* <TouchableOpacity style={{ backgroundColor: 'black', width: '50%', alignSelf: 'center', margin: 20 }}
-
-        onPress={getvalue}
-
-      //       onPress={() => navigation.navigate('formdemo',{,Email: email,Password: password})}
-      >
-
-        <Text style={{ fontWeight: 'bold', alignSelf: 'center', fontSize: 20, color: 'white' }}
-        >
-          Show</Text>
-      </TouchableOpacity> */}
-      {/* <TouchableOpacity style={{ backgroundColor: 'black', width: '50%', alignSelf: 'center', margin: 20 }}
-
-        onPress={clearvalue}
-
-      //       onPress={() => navigation.navigate('formdemo',{Name: name,Email: email,Password: password})}
-      >
-
-        <Text style={{ fontWeight: 'bold', alignSelf: 'center', fontSize: 20, color: 'white' }}
-        >
-          Show</Text>
-      </TouchableOpacity> */}
-
-
-
-
-
-
-
+/>
 
     </View>
 
